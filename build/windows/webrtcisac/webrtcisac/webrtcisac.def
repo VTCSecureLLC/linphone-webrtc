@@ -1,0 +1,18 @@
+LIBRARY webrtcisac
+EXPORTS
+
+WebRtcIsacfix_Assign
+WebRtcIsacfix_AssignSize
+WebRtcIsacfix_GetErrorCode
+WebRtcIsacfix_Control
+WebRtcIsacfix_Decode
+WebRtcIsacfix_DecodePlc
+WebRtcIsacfix_DecoderInit
+WebRtcIsacfix_Encode
+WebRtcIsacfix_EncoderInit
+WebRtcIsacfix_GetNewFrameLen
+WebRtcIsacfix_GetUplinkBw
+WebRtcIsacfix_SetMaxRate
+WebRtcIsacfix_ReadFrameLen
+WebRtcIsacfix_version
+WebRtcSpl_Init
