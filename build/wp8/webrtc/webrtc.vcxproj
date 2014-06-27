@@ -20,7 +20,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{A5A719E5-FDD6-4DFD-AAF6-68C9534B5562}</ProjectGuid>
-    <RootNamespace>webrtcisac</RootNamespace>
+    <RootNamespace>webrtc</RootNamespace>
     <DefaultLanguage>en-US</DefaultLanguage>
     <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
   </PropertyGroup>
@@ -53,7 +53,7 @@
   <ItemDefinitionGroup>
     <ClCompile>
       <WarningLevel>Level4</WarningLevel>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..;$(ProjectDir)..\..\..\common_audio\signal_processing\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..;$(ProjectDir)..\..\..\common_audio\signal_processing\include;$(ProjectDir)..\..\..\modules\audio_processing\aecm\include;$(ProjectDir)..\..\..\modules\audio_processing\utility;$(ProjectDir)..\..\..\system_wrappers\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_WIN32;_WINDLL;_USRDLL;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
@@ -66,10 +66,10 @@
       <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
       <ImportLibrary>$(TargetDir)$(TargetName).lib</ImportLibrary>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
-      <ModuleDefinitionFile>$(ProjectDir)webrtcisac.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>$(ProjectDir)webrtc.def</ModuleDefinitionFile>
     </Link>
     <CustomBuildStep>
-      <Outputs>$(TargetDir)$(TargetName)_dll.lib;%(Outputs)</Outputs>
+      <Outputs>$(TargetDir)$(TargetName).lib;%(Outputs)</Outputs>
     </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)'=='Debug'">
@@ -169,6 +169,12 @@
     <ClCompile Include="..\..\..\modules\audio_coding\codecs\isac\fix\source\pitch_lag_tables.c" />
     <ClCompile Include="..\..\..\modules\audio_coding\codecs\isac\fix\source\spectrum_ar_model_tables.c" />
     <ClCompile Include="..\..\..\modules\audio_coding\codecs\isac\fix\source\transform.c" />
+    <ClCompile Include="..\..\..\modules\audio_processing\aecm\aecm_core.c" />
+    <ClCompile Include="..\..\..\modules\audio_processing\aecm\echo_control_mobile.c" />
+    <ClCompile Include="..\..\..\modules\audio_processing\utility\delay_estimator.c" />
+    <ClCompile Include="..\..\..\modules\audio_processing\utility\delay_estimator_wrapper.c" />
+    <ClCompile Include="..\..\..\modules\audio_processing\utility\fft4g.c" />
+    <ClCompile Include="..\..\..\modules\audio_processing\utility\ring_buffer.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\common_audio\signal_processing\resample_by_2_internal.h" />

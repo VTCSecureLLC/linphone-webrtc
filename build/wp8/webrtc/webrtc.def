@@ -1,6 +1,13 @@
-LIBRARY webrtcisac
+LIBRARY webrtc
 EXPORTS
 
+WebRtcAecm_BufferFarend
+WebRtcAecm_Create
+WebRtcAecm_Free
+WebRtcAecm_get_error_code
+WebRtcAecm_Init
+WebRtcAecm_Process
+WebRtcAecm_set_config
 WebRtcIsacfix_Assign
 WebRtcIsacfix_AssignSize
 WebRtcIsacfix_GetErrorCode
