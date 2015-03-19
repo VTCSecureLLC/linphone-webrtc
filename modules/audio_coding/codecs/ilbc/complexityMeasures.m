@@ -31,10 +31,10 @@ result=zeros(functionOrder,3);
 for i=1:functionOrder
     nonzeroelements = find(new(1:end,i)>0);
     result(i,1)=i;
-    
+
     % Compute each function's mean complexity
     % result(i,2)=(sum(new(nonzeroelements,i))/(length(nonzeroelements)*0.03))/1000000;
-    
+
     % Compute each function's maximum complexity in encoding
     % and decoding respectively and then add it together:
     % result(i,3)=(max(new(1:end,i))/0.03)/1000000;
