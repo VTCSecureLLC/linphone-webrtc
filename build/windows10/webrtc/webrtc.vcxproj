@@ -158,7 +158,7 @@
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>$(ProjectDir)..\..\..;$(ProjectDir)..\..\..\common_audio\signal_processing\include;$(ProjectDir)..\..\..\modules\audio_processing\aecm\include;$(ProjectDir)..\..\..\modules\audio_processing\utility;$(ProjectDir)..\..\..\system_wrappers\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">__ARMEL__;WEBRTC_ARCH_ARM;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Platform)'=='ARM'">__ARMEL__;WEBRTC_ARCH_ARM;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
